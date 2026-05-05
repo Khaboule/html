@@ -1,0 +1,117 @@
+@font-face {
+    font-family: "starjedi";
+    src: url("assets/Starjedi.ttf");
+}
+
+body {
+    margin: 0;
+    font-family: "starjedi";
+}
+
+
+header {
+    display:flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    box-shadow: 3px 0 12px;
+    background-color: black;
+
+}
+
+
+.logo {
+    width: 120px;
+}
+
+header nav ul {
+    display:flex;
+    list-style-type:none;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+
+header nav ul li a {
+    color: white;
+    font-size: 20px;
+    text-decoration:none;
+
+}
+header nav ul li a:hover {
+    text-decoration: underline;
+    color: lightgray;
+} 
+
+main {
+    margin: 0 52px;
+    margin-bottom: 80px;
+}
+
+main article {
+    width: 380px;
+    box-shadow: 3px 3px 8px;
+    padding: 12px;
+    
+}
+
+main section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+main article h3, .content {
+    border-bottom: 1px solid black;
+}
+
+
+.content {
+    text-align: justify;
+
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    margin: 24px;
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 6px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+@media (max-width: 576px) {
+    header {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .logo {
+        margin-right: 12px;
+        width: 150px;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    footer {
+        display: none;
+    }
+}
