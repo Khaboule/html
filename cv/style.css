@@ -10,9 +10,9 @@ body {
     background-color: #f5f5f5;
 }
 
+
 header {
-    background-image: url('../photo-fond.jpg');
-    background-color: #1a1a2e; 
+    background-color: #1a1a2e;
     background-size: cover;
     background-position: center;
     color: white;
@@ -20,31 +20,29 @@ header {
     width: 100%;
 }
 
-.header-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
-    margin-bottom: 20px;
-}
 
-.photo {
-    width: 130px;
-    height: 130px;
+header .photo {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     border: 4px solid white;
     object-fit: cover;
+    display: block;
+    margin-bottom: 16px;
 }
 
-.header-info h1 {
+header h1 {
     font-size: 2rem;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
+
 
 table {
     border-collapse: collapse;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     overflow: hidden;
+    margin-bottom: 16px;
 }
 
 th {
@@ -57,7 +55,7 @@ th {
 
 td {
     padding: 6px 16px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
 }
 
@@ -66,10 +64,15 @@ td:first-child {
     color: #e94560;
 }
 
+
 nav {
     margin-top: 16px;
+}
+
+nav ul {
+    list-style: none;
     display: flex;
-    gap: 16px;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
@@ -87,10 +90,12 @@ nav a:hover {
     background-color: #c73652;
 }
 
+
 .reseaux {
     margin-top: 12px;
     display: flex;
     gap: 12px;
+    flex-wrap: wrap;
 }
 
 .reseaux a {
@@ -108,6 +113,7 @@ nav a:hover {
     color: white;
 }
 
+
 main {
     max-width: 900px;
     margin: 40px auto;
@@ -117,11 +123,12 @@ main {
     gap: 30px;
 }
 
+
 section {
     background-color: white;
     border-radius: 10px;
     padding: 24px 30px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 section h2 {
@@ -132,27 +139,24 @@ section h2 {
     margin-bottom: 16px;
 }
 
-#competences {
-    background-color: #eef6ff;
-}
 
-#formations {
-    background-color: #fff8ee;
-}
+#competences { background-color: #eef6ff; }
+#formations   { background-color: #fff8ee; }
+#experiences  { background-color: #f0fff4; }
+#medias       { background-color: #fdf4ff; }
 
-#experiences {
-    background-color: #f0fff4;
-}
 
 #competences ol {
     padding-left: 20px;
     line-height: 2;
 }
 
+
 .ville {
     font-weight: bold;
     color: #e94560;
 }
+
 
 .formation, .experience {
     margin-bottom: 20px;
@@ -177,19 +181,135 @@ section h2 {
     color: #444;
 }
 
+
+.media-bloc {
+    margin-bottom: 24px;
+}
+
+.media-bloc h3 {
+    font-size: 1rem;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+
+audio {
+    width: 100%;
+}
+
+
+.img-responsive {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+
 footer {
     background-color: #1a1a2e;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 24px 20px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 }
 
-footer a {
-    color: #e94560;
+footer p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+
+.btn-contact {
+    background-color: #e94560;
+    color: white;
+    padding: 10px 28px;
+    border-radius: 6px;
     text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-footer a:hover {
-    text-decoration: underline;
+.btn-contact:hover {
+    background-color: white;
+    color: #e94560;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.5);
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px 24px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+
+    .img-responsive {
+        width: 80%;
+    }
+
+    main {
+        margin: 24px auto;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 16px;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+
+    .img-responsive {
+        width: 90%;
+    }
+
+
+    .masquer-mobile {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    table {
+        font-size: 0.85rem;
+        width: 100%;
+    }
+
+    td, th {
+        padding: 4px 10px;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    .btn-contact {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
 }

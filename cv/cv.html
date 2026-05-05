@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Khalil Serdoun</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Twitter_default_profile_400x400.png" alt="photo">
-            <h1>Khalil Serdoun
 
-            </h1>
-            <table>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Twitter_default_profile_400x400.png" alt="photo de profil" class="photo">
+
+        <h1>Khalil Serdoun</h1>
+
+        <!-- Tableau des infos personnelles -->
+        <table>
+            <thead>
                 <tr>
-                <td>Nom</td>
+                    <th colspan="2">Noms</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nom</td>
                     <td>Serdoun</td>
                 </tr>
                 <tr>
@@ -23,7 +34,7 @@
                 </tr>
                 <tr>
                     <td>Téléphone</td>
-                    <td>0782582578</td>
+                    <td>07 82 58 25 78</td>
                 </tr>
                 <tr>
                     <td>Âge</td>
@@ -31,47 +42,115 @@
                 </tr>
                 <tr>
                     <td>Description</td>
-                    <td>Etudiant en B1</td>
+                    <td>Etudiant en B1 à l'École Hexagone</td>
                 </tr>
-            </table>
+            </tbody>
+        </table>
+
+        <!-- Navigation vers les sections -->
         <nav>
             <ul>
                 <li><a href="#competences">Compétences</a></li>
                 <li><a href="#formations">Formations</a></li>
                 <li><a href="#experiences">Expériences</a></li>
+                <li><a href="#medias">Médias</a></li>
             </ul>
         </nav>
-        </header>
 
-        <main>
-        <section>
-            <h2 id="competences">Compétences</h2>
-            <ul>
-                <li>HTML/CSS</li>
+  
+        <div class="reseaux">
+            <a href="https://www.linkedin.com" target="_blank">🔗 LinkedIn</a>
+            <a href="https://github.com/Khaboule" target="_blank">🐙 GitHub</a>
+        </div>
+
+    </header>
+
+    <main>
+
+
+        <section id="competences">
+            <h2>Compétences</h2>
+            <ol>
+                <li>HTML / CSS</li>
                 <li>Python</li>
                 <li>C++</li>
-                <li>RESEAUX</li>
-                <li>GITHUB</li>
-            </ul>
+                <li>C</li>
+                <li>Réseaux</li>
+                <li>GitHub</li>
+
+            </ol>
         </section>
 
-        <section>
-            <h2 id="formations">Formations</h2>
-            <ul>
-                <li>Prépa MP2I</li>
-                <li>Bachelor Informatique</li>
-            </ul>
+
+        <section id="formations">
+            <h2>Formations</h2>
+            <article class="formation">
+                <h3>Prépa MP2I — <span class="ville">Lille</span></h3>
+                <p>JUNIA Lille</p>
+            </article>
+            <article class="formation">
+                <h3>Bachelor Informatique — <span class="ville">Versailles</span></h3>
+                <p>École Hexagone</p>
+            </article>
         </section>
 
-        <section>
-            <h2 id="experiences">Expériences</h2>
-            <ul>
-                <li>Formation ANSSI</li>
-            </ul>
-        </section>  
-        </main>
-        <footer>
-            <p>Contact: <a href="mailto:khalilserd@gmail.com">khalilserd@gmail.com</a></p>
-        </footer>
-    </body>
+
+        <section id="experiences">
+            <h2>Expériences</h2>
+            <article class="experience">
+                <h3>Formation ANSSI</h3>
+                <ul>
+                    <li>Sensibilisation à la cybersécurité</li>
+                    <li>Analyse des menaces informatiques</li>
+                    <li>Mise en pratique sur des cas concrets</li>
+                </ul>
+            </article>
+        </section>
+
+
+        <section id="medias">
+            <h2>Médias</h2>
+
+
+            <div class="media-bloc">
+                <h3>Image responsive</h3>
+                <picture>
+                    <!-- Desktop >= 768px -->
+                    <source media="(min-width: 768px)" srcset="https://picsum.photos/800/200">
+                    <!-- Tablette >= 480px -->
+                    <source media="(min-width: 480px)" srcset="https://picsum.photos/500/180">
+                    <!-- Mobile fallback -->
+                    <img src="https://picsum.photos/300/120" alt="Image responsive selon l'écran">
+                </picture>
+            </div>
+
+            <!-- Image responsive centrée : 50% desktop, 80% tablette, 90% mobile -->
+            <div class="media-bloc">
+                <h3>Bannière</h3>
+                <img src="https://www.clipartmax.com/png/middle/233-2339124_vt-banner-template-by-vectorsmash-on-deviantart-banner.png" alt="bannière" class="img-responsive">
+            </div>
+
+
+            <div class="media-bloc masquer-mobile">
+                <h3>Ma playlist Spotify</h3>
+                <iframe
+                    src="https://open.spotify.com/playlist/45FW2LCLrlr5m7NvfB3F9R?si=c363a119e56345b8"
+                    width="100%"
+                    height="80"
+                    frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                </iframe>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <a href="mailto:khalilserd@gmail.com" class="btn-contact">📧 Me contacter</a>
+    </footer>
+
+</body>
+
 </html>
