@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <form method="POST">
+        <h1>Formulaire d'inscription</h1>
+
+
+        <div class="champ">
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" />
+        </div>
+
+
+        <div class="champ">
+            <label for="nom">Nom de famille :</label>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom" />
+        </div>
+
+
+        <div class="champ">
+            <label for="email">Adresse e-mail :</label>
+            <input type="email" id="email" name="email" placeholder="exemple@mail.com" required />
+        </div>
+
+
+        <div class="champ">
+            <label for="motdepasse">Mot de passe :</label>
+            <input type="password" id="motdepasse" name="motdepasse" placeholder="********" required />
+        </div>
+
+
+        <div class="champ">
+            <label>Genre :</label>
+            <div class="options">
+                <label>
+                    <input type="radio" name="genre" value="homme" /> Homme
+                </label>
+                <label>
+                    <input type="radio" name="genre" value="femme" /> Femme
+                </label>
+                <label>
+                    <input type="radio" name="genre" value="autre" /> Autre
+                </label>
+            </div>
+        </div>
+
+
+        <div class="champ">
+            <label>Loisirs :</label>
+            <div class="options">
+                <label>
+                    <input type="checkbox" name="loisirs" value="sport" /> Sport
+                </label>
+                <label>
+                    <input type="checkbox" name="loisirs" value="lecture" /> Lecture
+                </label>
+                <label>
+                    <input type="checkbox" name="loisirs" value="musique" /> Musique
+                </label>
+            </div>
+        </div>
+
+
+        <div class="champ">
+            <label for="pays">Pays de résidence :</label>
+            <select id="pays" name="pays">
+                <option value="">Choisir un pays</option>
+                <option value="fr">France</option>
+                <option value="be">Belgique</option>
+                <option value="ch">Suisse</option>
+                <option value="ca">Canada</option>
+                <option value="ma">Maroc</option>
+                <option value="autre">Autre</option>
+            </select>
+        </div>
+
+
+        <div class="champ">
+            <label for="bio">Biographie :</label>
+            <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Parlez de vous" maxlength="893"></textarea>
+        </div>
+
+
+        <div class="boutons">
+            <input type="submit" value="S'inscrire" />
+            <input type="reset" value="Réinitialiser" />
+        </div>
+
+    </form>
+</body>
+
+</html>
